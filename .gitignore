@@ -1,0 +1,44 @@
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Caches & outils
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pycache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# uv
+.uv-cache/
+.uvcache/
+
+# IDE / éditeurs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Commandes Cursor (copie versionnée dans commande_ia/)
+.cursor/commands/

@@ -1,0 +1,29 @@
+[[events]]
+identifier = "camera_zoom_01"
+trigger_x = 1500.0
+event_type = "camera_zoom"
+
+[events.event_data]
+zoom_percent = 150.0
+duration = 1
+bottom_margin = 50.0
+keep_bubbles_visible = true
+
+
+[[events]]
+identifier = "camera_zoom_reset_01"
+event_type = "camera_zoom_reset"
+
+[events.event_data]
+duration = 0.9
+
+# Événement : masquer l'echelle
+[[events]]
+identifier = "hide_echelle"
+event_type = "sprite_hide"
+
+[events.event_data]
+sprite_tag = "echelle_removable"
+fade_duration = 1.0  # Disparaît progressivement sur 1 seconde
+remove_collisions = true  # Supprime les collisions une fois masqué
+

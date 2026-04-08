@@ -1,0 +1,93 @@
+# Fichier : config/player_stats.toml
+# Configuration des caractéristiques du personnage par niveau
+# max_level : niveau maximum du personnage (doit correspondre aux dossiers sprite/personnage/1..N)
+max_level = 5
+# double_jump_unlock_level : niveau minimal pour autoriser le double saut (1..max_level ; défaut 3 si absent)
+double_jump_unlock_level = 3
+# display_name : nom affiché au-dessus du sprite et dans le titre des statistiques (obligatoire, non vide)
+display_name = "nom"
+
+# [presentation] : textes de la colonne droite de l'écran statistiques (S) — trois listes obligatoires, non vides, sans entrée vide
+[presentation]
+origins = [
+    "origin 1 : origine",
+    "origin 2 : origine",
+    "origin 3 : origine",
+]
+class_role = [
+    "Classe 1 : classe",
+    "Classe 2 : classe",
+    "Classe 3 : classe",
+]
+traits = [
+    "trait 1",
+    "trait 2",
+    "trait 3",
+]
+
+[stats.attribut1]
+name = "attribut1"
+description = "Attribut 1"
+tooltip_level_1 = "Exemple — niveau 1 : texte court décrivant ce palier pour l'attribut 1."
+tooltip_level_2 = "Exemple — niveau 2 : texte court décrivant ce palier pour l'attribut 1."
+tooltip_level_3 = "Exemple — niveau 3 : texte un peu plus long si besoin (retours possibles).\n\n\nDétail optionnel sur ce que représente ce niveau."
+tooltip_level_4 = "Exemple — niveau 4 : description du palier avancé.\n\n\n\n\n\nBloc supplémentaire pour un tooltip plus riche (ex. listes ou paragraphes)."
+tooltip_level_5 = "Exemple — niveau 5 : texte pour le palier maximum — synthèse ou compétences maîtrisées à ce stade."
+level_1 = 60
+level_2 = 60
+level_3 = 70
+level_4 = 85
+level_5 = 90
+max_value = 100 
+
+[stats.attribut2]
+name = "attribut2"
+description = "Attribut 2"
+tooltip_level_1 = "Exemple — niveau 1 : texte pour l'attribut 2."
+tooltip_level_2 = "Exemple — niveau 2 : texte pour l'attribut 2."
+tooltip_level_3 = "Exemple — niveau 3 : texte pour l'attribut 2."
+tooltip_level_4 = "Exemple — niveau 4 : texte pour l'attribut 2."
+tooltip_level_5 = "Exemple — niveau 5 : texte pour l'attribut 2."
+level_1 = 60
+level_2 = 70
+level_3 = 70
+level_4 = 70
+level_5 = 70
+max_value = 100 
+
+[stats.intelligence]
+name = "attribut3"
+description = "Attribut 3"
+tooltip_level_1 = "Exemple — niveau 1 : texte pour l'attribut 3."
+tooltip_level_2 = "Exemple — niveau 2 : texte pour l'attribut 3."
+tooltip_level_3 = "Exemple — niveau 3 : paragraphe avec sauts de ligne.\n\n\nSous-partie ou précision optionnelle."
+tooltip_level_4 = "Exemple — niveau 4 : texte pour l'attribut 3."
+tooltip_level_5 = "Exemple — niveau 5 : liste possible dans le tooltip :\n\n\n- point A\n\n\n- point B"
+level_1 = 0
+level_2 = 30
+level_3 = 50
+level_4 = 65
+level_5 = 75
+max_value = 100 
+
+[stats.vitesse]
+name = "attribut4"
+description = "Attribut 4"
+tooltip_level_1 = "Exemple — niveau 1 : texte pour l'attribut 4."
+tooltip_level_2 = "Exemple — niveau 2 : texte pour l'attribut 4."
+tooltip_level_3 = "Exemple — niveau 3 : texte pour l'attribut 4."
+tooltip_level_4 = "Exemple — niveau 4 : texte pour l'attribut 4."
+tooltip_level_5 = "Exemple — niveau 5 : plusieurs blocs séparés par des lignes vides.\n\n\n\n\n\nBloc intermédiaire.\n\n\n\n\n\nBloc final."
+level_1 = 0
+level_2 = 20
+level_3 = 45
+level_4 = 70
+level_5 = 85
+max_value = 100 
+
+[level_up_messages]
+level_2 = " "
+level_3 = "DOUBLE SAUT ACTIVÉ !!!!"
+level_4 = " "
+level_5 = " "
+

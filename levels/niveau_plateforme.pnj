@@ -1,0 +1,45 @@
+[[npcs]]
+id = "robot_01"
+name = "Chat GPT"
+x = 2000.0
+direction = "left"
+sprite_sheet_path = "sprite/pnj/robot/robot.png"
+sprite_width = 31
+sprite_height = 63
+
+# Animations optionnelles
+[npcs.animations.idle]
+row = 0
+num_frames = 1
+animation_speed = 0
+loop = false
+
+
+# Blocs de dialogue sur l'apparition de l'api open ai
+[[npcs.dialogue_blocks]]
+position_min = 1900.0
+position_max = 2100.0
+font_size = 32
+text_speed = 300.0
+
+[[npcs.dialogue_blocks.exchanges]]
+speaker = "npc"
+text = "exemple de l'animation du personnage principal"
+player_animation = {sprite_sheet_path = "spellcast.png", row = 2, num_frames = 6, animation_speed = 10.0, animation_type = "pingpong"}
+
+
+[[npcs.dialogue_blocks.exchanges]]
+speaker = "npc"
+text = "exemple d'intégration d'image"
+image_path = "exemple_image.png"
+
+[[npcs.dialogue_blocks.exchanges]]
+speaker = "npc"
+text = "On supprime l'echelle et on zoom out"
+trigger_events = ["hide_echelle", "camera_zoom_reset_01"]
+
+
+
+
+
+

@@ -1,0 +1,243 @@
+# Fichier : levels/niveau_plateforme.niveau
+# Niveau avec une plateforme en dessous du joueur
+
+# Déclaration des sprite sheets
+[sprite_sheets.terrain]
+path = "sprite/terrain-montage.png"
+sprite_width = 64
+sprite_height = 64
+spacing = -11
+
+[sprite_sheets.background]
+path = "sprite/background.png"
+sprite_width = 1920  # Largeur complète de l'image (un seul sprite)
+sprite_height = 1280  # Hauteur complète de l'image (un seul sprite)
+spacing = 0.0
+
+[sprite_sheets.clouds]
+path = "sprite/nuage.png"
+sprite_width = 192  # 384 / 2 colonnes
+sprite_height = 128  # 384 / 3 lignes
+spacing = 0.0
+
+[sprite_sheets.forest]
+path = "sprite/forest.png"
+sprite_width = 284  # 6 colonnes : 1704 / 6 = 284
+sprite_height = 400  # 1 ligne : tous les sprites alignés en base
+spacing = 0.0
+
+# Déclaration du sprite sheet
+[sprite_sheets.echelle]
+path = "sprite/echelle.png"
+sprite_width = 64   # Largeur de chaque cellule
+sprite_height = 64  # Hauteur de chaque cellule
+spacing = 0.0
+
+[player]
+level = 1
+
+# Background en depth 0 - couvre tout l'écran
+[[sprites]]
+sheet = "background"
+row = 0
+col = 0
+depth = 0  # Background
+count_x = 1
+y_offset = -150.0  # Positionné en haut de l'écran
+is_infinite = true  # Se répète horizontalement à l'infini
+
+
+# Nuages en depth 1 - répartis pour créer une distribution naturelle
+# Le sprite sheet nuage.png a 2 colonnes (0-1) et 3 lignes (0-2)
+# Note: L'ancien repeat_x_offset (offset progressif) n'est plus supporté avec is_infinite = false
+
+
+
+# Séquence de nuages (0,1) - hauteur haute
+[[sprites]]
+sheet = "clouds"
+row = 0
+col = 1
+depth = 0
+count_x = 3
+y_offset = 150.0
+x_offset = 500.0
+spacing = 60.0
+is_infinite = true
+infinite_offset = 200.0
+
+# Séquence de nuages (1,0) - hauteur basse
+[[sprites]]
+sheet = "clouds"
+row = 1
+col = 0
+depth = 1
+count_x = 3
+y_offset = 80.0
+x_offset = 800.0
+spacing = 0.0
+is_infinite = true
+infinite_offset = 200.0
+
+# Séquence de nuages (0,0) - hauteur moyenne
+[[sprites]]
+sheet = "clouds"
+row = 0
+col = 0
+depth = 1
+count_x = 2
+y_offset = 100.0
+x_offset = 200.0
+spacing = 20.0
+is_infinite = true
+infinite_offset = 70.0
+
+# Séquence de nuages (1,1) - hauteur très haute
+[[sprites]]
+sheet = "clouds"
+row = 1
+col = 1
+depth = 1
+count_x = 2
+y_offset = 200.0
+x_offset = 1200.0
+spacing = 0.0
+is_infinite = true
+infinite_offset = 120.0
+
+# Séquence de nuages (2,0) - hauteur moyenne-basse
+[[sprites]]
+sheet = "clouds"
+row = 2
+col = 0
+depth = 1
+count_x = 2
+y_offset = 120.0
+x_offset = 1500.0
+spacing = 0.0
+is_infinite = true
+infinite_offset = 200.0
+
+# Séquence de nuages (2,1) - hauteur moyenne-haute
+[[sprites]]
+sheet = "clouds"
+row = 2
+col = 1
+depth = 1
+count_x = 2
+y_offset = 200.0
+x_offset = 2500.0
+spacing = 0.0
+is_infinite = true
+infinite_offset = 200.0
+
+# sol principal
+[[sprites]]
+sheet = "terrain"
+row = 1
+col = 1
+depth = 2
+count_x = 30
+y_offset = 1040.0
+is_infinite = true  # Se répète horizontalement à l'infini
+infinite_offset = -30
+
+# arbres en arrière-plan (depth 0)
+# Le sol est à y_offset = 1040, les arbres font 400px de haut et sont alignés en base
+# y_offset = 1040 - 400 = 640 pour aligner la base des arbres avec le sol
+[[sprites]]
+sheet = "forest"
+row = 0
+col = 0
+depth = 0
+count_x = 1
+scale = 0.2
+y_offset = 640.0
+x_offset = -220.0
+is_infinite = true
+infinite_offset = 200
+
+[[sprites]]
+sheet = "forest"
+row = 0
+col = 2
+depth = 0
+count_x = 1
+scale = 0.5
+y_offset = 640.0
+x_offset = 260.0
+is_infinite = true
+infinite_offset = 350
+
+# arbres de milieu (depth 1)
+[[sprites]]
+sheet = "forest"
+row = 0
+col = 1
+depth = 1
+count_x = 1
+scale = 1
+y_offset = 640.0
+x_offset = 120.0
+is_infinite = true
+infinite_offset = 450
+
+[[sprites]]
+sheet = "forest"
+row = 0
+col = 3
+depth = 1
+count_x = 1
+y_offset = 640.0
+x_offset = 620.0
+is_infinite = true
+infinite_offset = 270
+
+[[sprites]]
+sheet = "forest"
+row = 0
+col = 5
+depth = 1
+count_x = 1
+scale = 1.5
+y_offset = 650.0
+x_offset = 980.0
+is_infinite = true
+infinite_offset = 600
+
+# arbres proches (depth 3)
+[[sprites]]
+sheet = "forest"
+row = 0
+col = 5
+depth = 3
+count_x = 4
+scale = 0.9
+y_offset = 650.0
+x_offset = 350.0
+is_infinite = false
+spacing = 600.0
+#repeat_x_offset = 600.0
+
+# Exemple d'une echelle 
+[[sprites]]
+sheet = "echelle"
+row = 0
+col = 0
+depth = 2
+count_x = 1
+count_y = 10
+scale = 1
+y_offset = 990.0  # Ajustez selon vos besoins
+x_offset = 1300.0  # Ajustez selon vos besoins
+is_infinite = false
+is_background = true
+is_climbable = true
+tags = ["echelle_removable"]
+
+
+
+
+
+
+

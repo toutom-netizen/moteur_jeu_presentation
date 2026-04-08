@@ -1,0 +1,55 @@
+# Fichier : config/inventory_items.toml
+# Configuration des objets d'inventaire disponibles dans le jeu
+# Les objets sont définis à partir de sprite sheets avec un système de cellules
+
+# Document avec étoile 
+[items.document_etoile]
+name = "Document avec étoile"
+description = "Un document important marqué d'une étoile dorée"
+sprite_path = "sprite/items/outils_all_v3.png"
+cell_width = 51
+cell_height = 57
+cell_row = 1
+cell_col = 0
+
+# Loupe magique 
+[items.loupe_magique]
+name = "Loupe magique"
+description = "Une loupe magique avec un orbe lumineux qui émet des particules"
+sprite_path = "sprite/items/outils_all_v3.png"
+cell_width = 51
+cell_height = 57
+cell_row = 1
+cell_col = 1
+
+# Document avec assistant 
+[items.assistant_personnel]
+name = "assistant personnel"
+description = "Un assistant personnel"
+sprite_path = "sprite/items/outils_all_v3.png"
+cell_width = 51
+cell_height = 57
+cell_row = 0
+cell_col = 0
+
+# RH
+[items.rh]
+name = "RH"
+description = "accompagnement RH"
+sprite_path = "sprite/items/outils_all_v3.png"
+cell_width = 51
+cell_height = 57
+cell_row = 0
+cell_col = 1
+
+# RH
+[items.mcp]
+name = "MCP"
+description = "mcp entreprise"
+sprite_path = "sprite/items/outils_all_v3.png"
+cell_width = 51
+cell_height = 57
+cell_row = 0
+cell_col = 2
+
+

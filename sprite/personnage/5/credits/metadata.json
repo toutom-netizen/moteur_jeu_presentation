@@ -1,0 +1,14 @@
+{
+  "exportTimestamp": "2026-01-15T10-12-15",
+  "bodyType": "male",
+  "standardAnimations": {
+    "exported": [],
+    "failed": []
+  },
+  "customAnimations": {
+    "exported": [],
+    "failed": []
+  },
+  "frameSize": 64,
+  "frameCounts": {}
+}
